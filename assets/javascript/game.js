@@ -1,9 +1,9 @@
 var letters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "_"];
 
 function getRandomIntInclusive(min, max) {
-  min = Math.ceil(min);
-  max = Math.floor(max);
-  return Math.floor(Math.random() * (max - min + 1)) + min;
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
 function getRandomElement(min, max, ArrOfElements) {
@@ -24,20 +24,20 @@ function modifyDOMelement(elementId, SomeText) {
 }
 
 // define global variables
-    var win = 0;
-    var loss = 0;
-    var gLeft = 9;
+var win = 0;
+var loss = 0;
+var gLeft = 9;
 
 //gets keyboard keyup and retruns value
 document.onkeyup = function keyWasPressed(evt) {
-    
+
     var letter = String.fromCharCode(event.keyCode).toLowerCase();
-    
+
     var RandomLetter = getRandomElement(0, 25, letters).toLowerCase();
     console.log(RandomLetter);
 
     if (letter === RandomLetter) {
-      console.log("win");
+        console.log("win");
         win++;
         modifyDOMelement("Wins", win);
     }
